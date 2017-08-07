@@ -1,0 +1,257 @@
+﻿<head>
+<meta http-equiv="content-type" content="text/html; charset=utf=8"/>
+</head>
+
+<body>
+
+<div id="cx" onclick="check(ii.value)" style="background:url(20.png);background-size:100% 
+
+100%;width:50;height:70;position:absolute;z-index:50;left:120;top:100;"></div>
+
+
+
+<style>
+
+#cx
+{
+cursor:pointer;
+}
+
+
+#cx:hover
+{
+opacity:0.7;
+}
+
+
+input, button
+{
+outline:none;
+}
+
+body
+{
+
+background:url(1.jpg);
+
+
+}
+
+
+div
+{
+
+
+
+}
+
+
+
+
+
+</style>
+
+
+
+
+</body>
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+
+chimi = ["H2O", "N2O5", "C2H4", "HBr", "H2S", "H3AsO4", "H2Cr2O7", "CH3COOH", "C9H13NO3"]
+
+chimix =
+{
+
+"H2O":["вода"],
+"N2O5": ["оксид азота", "пентаоксид диазота", "нитрат нитрила", "нитрат нитрония",  "азотный ангидрид"],
+"C2H4": ["этилен"],
+"HBr": ["бромоводород"],
+"H2S": ["этилен"],
+"H3AsO4": ["мышьяковая кислота"],
+"H2Cr2O7": ["хромовая кислота"],
+"CH3COOH": ["уксусная кислота"],
+}
+
+xxx=undefined
+
+
+while(xxx==undefined)
+{
+
+
+xxx=Math.round(Math.random() * (chimi.length - 1) + 0)
+
+
+
+
+}
+
+
+x=chimi[xxx]
+
+
+
+
+
+
+
+
+
+
+xx=20
+
+window.onload=function()
+{
+
+for(c in x)
+{
+
+
+div=document.createElement("div")
+div.style.left=xx
+div.style.top=25
+div.style.position="absolute"
+div.style.width=50
+div.style.height=50
+document.body.appendChild(div)
+div.innerHTML=x[c]
+div.style.fontWeight="bold"
+div.style.textShadow="0 1px 1px rgba(0,0,0,0.5)"
+div.style.color="transparent"
+div.style.zIndex=5
+
+
+
+for(c2 in x[c])
+{
+
+
+
+}
+
+
+
+
+
+i=Math.round(Math.random()*1)
+if(i==0)
+{
+div.style.transform="rotate(" + Math.round(Math.random()*50) + "deg)"
+}
+
+else
+{
+
+div.style.transform="rotate(" + Math.round(Math.random()*-50) + "deg)"
+
+}
+
+
+
+div.style.fontSize="150%"
+
+xx+=30
+
+
+}
+}
+
+
+function check(value)
+{
+
+
+l=false
+
+
+
+
+value=value.toLowerCase()
+
+
+
+
+
+
+for(iii in chimix[x])
+{
+
+iii2=chimix[x][iii]
+if(iii2.toString()==value){l=true}
+
+
+
+
+
+else
+{
+l=false
+}
+
+}
+
+
+
+if(l==true)
+{
+
+alert("Правильно!")
+
+
+}
+
+else
+{
+
+alert("Ошибка! Правильный ответ: " + iii2.toString())
+
+}
+
+
+
+
+}
+
+</script>
+
+<style>
+
+
+
+
+</style>
+
+
+<div id="p2" style="position:absolute;border:2px solid black;width:300;height:529.6;border-
+
+radius:5px;background:url(5.jpg); background-size:200% 100%;"></div>
+
+<div id="p" style="background:url(50.jpg);position:absolute;border:1px solid 
+
+black;width:300;height:80;border-radius:5px;"></div>
+
+
+
+
+
+
+
+
+<input autocomplete="off" placeholder="Введите название вещества" id="ii" style="background:url(100.jpg);border:1px solid black; position:absolute; top:70; width:303;color:yellow;"></input>
+
+
+
+
